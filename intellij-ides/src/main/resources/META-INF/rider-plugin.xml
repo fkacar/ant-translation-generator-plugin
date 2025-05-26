@@ -1,0 +1,34 @@
+<idea-plugin>
+    <dependencies>
+        <plugin id="com.intellij.modules.rider"/>
+    </dependencies>
+    
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Rider-specific language support -->
+        <lang.documentationProvider
+                language="C#"
+                implementationClass="com.ant.TranslationDocumentationProvider"
+                order="first"/>
+        <lang.documentationProvider
+                language="Razor"
+                implementationClass="com.ant.TranslationDocumentationProvider"
+                order="first"/>
+        <lang.documentationProvider
+                language="CSHTML"
+                implementationClass="com.ant.TranslationDocumentationProvider"
+                order="first"/>
+                
+        <!-- Register Rider plugin services -->
+        <projectService serviceImplementation="com.ant.rider.ComplementaryRiderPlugin"/>
+        
+        <!-- Register Rider settings page -->
+        <applicationConfigurable 
+                parentId="root"
+                instance="com.ant.TranslationSettingsConfigurable"
+                id="com.ant.TranslationSettingsConfigurable"
+                displayName="Ant Translation Settings"/>
+                
+        <!-- Activity that runs at Rider startup -->
+        <postStartupActivity implementation="com.ant.rider.RiderStartupActivity"/>
+    </extensions>
+</idea-plugin> 
