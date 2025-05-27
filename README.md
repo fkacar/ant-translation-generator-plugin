@@ -183,6 +183,7 @@ The plugin supports 70+ languages including:
 - PHP (.php)
 - HTML (.html)
 - Kotlin (.kt)
+- Razor (.razor)
 - And more...
 
 ## 🎯 Use Cases

@@ -14,34 +14,33 @@
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    <h3>🌍 Powerful IntelliJ IDEA plugin for internationalization (i18n)</h3>
-    <p>Generate translation keys instantly, manage multiple language files, and leverage AI-powered auto-translation with OpenAI GPT-4.</p>
-    
-    <h4>✨ Key Features:</h4>
-    <ul>
-      <li><strong>🚀 Instant Translation Key Generation</strong> - Select text and generate hierarchical keys with one keystroke</li>
-      <li><strong>🤖 AI-Powered Auto Translation</strong> - Integrate with OpenAI GPT-4 for automatic translations to 70+ languages</li>
-      <li><strong>📁 Multi-Language File Management</strong> - Support for multiple translation files with project-relative paths</li>
-      <li><strong>⌨️ Smart Keyboard Shortcuts</strong> - Generate (Shift+Ctrl+T) and Remove (Ctrl+Shift+Backspace or Cmd + Shift + Backspace for Mac) translation keys</li>
-      <li><strong>🎯 Smart Key Management</strong> - Remove keys and restore original text seamlessly</li>
-      <li><strong>🔧 Customizable Settings</strong> - Configure function names, file paths, and language mappings</li>
-    </ul>
-    
-    <h4>🌐 Supported Languages & IDEs:</h4>
-    <ul>
-      <li><strong>Languages:</strong> JavaScript, TypeScript, JSX, TSX, Vue, PHP, HTML, Kotlin, and more</li>
-      <li><strong>IDEs:</strong> IntelliJ IDEA, WebStorm, PhpStorm, PyCharm, Rider, Android Studio</li>
-      <li><strong>Translation Languages:</strong> 70+ languages with ISO 639-1 codes</li>
-    </ul>
-    
-    <h4>🔒 Privacy & Security:</h4>
-    <ul>
-      <li>Local API key storage - never shared</li>
-      <li>No data collection or transmission</li>
-      <li>Open source - full code review available</li>
-    </ul>
-    
-    <p><strong>Perfect for:</strong> React/Vue/Angular apps, Next.js/Nuxt.js projects, Mobile development, Multi-platform applications</p>
+Powerful IntelliJ IDEA plugin for internationalization (i18n). Generate translation keys instantly, manage multiple language files, and leverage AI-powered auto-translation with OpenAI GPT-4.
+
+<h4>Key Features:</h4>
+<ul>
+  <li><strong>Instant Translation Key Generation</strong> - Select text and generate hierarchical keys with one keystroke</li>
+  <li><strong>AI-Powered Auto Translation</strong> - Integrate with OpenAI GPT-4 for automatic translations to 70+ languages</li>
+  <li><strong>Multi-Language File Management</strong> - Support for multiple translation files with project-relative paths</li>
+  <li><strong>Smart Keyboard Shortcuts</strong> - Generate (Shift+Ctrl+T) and Remove (Ctrl+Shift+Backspace or Cmd + Shift + Backspace for Mac) translation keys</li>
+  <li><strong>Smart Key Management</strong> - Remove keys and restore original text seamlessly</li>
+  <li><strong>Customizable Settings</strong> - Configure function names, file paths, and language mappings</li>
+</ul>
+
+<h4>Supported Languages & IDEs:</h4>
+<ul>
+  <li><strong>Languages:</strong> JavaScript, TypeScript, JSX, TSX, Vue, PHP, HTML, Kotlin, and more</li>
+  <li><strong>IDEs:</strong> IntelliJ IDEA, WebStorm, PhpStorm, PyCharm, Rider, Android Studio</li>
+  <li><strong>Translation Languages:</strong> 70+ languages with ISO 639-1 codes</li>
+</ul>
+
+<h4>Privacy & Security:</h4>
+<ul>
+  <li>Local API key storage - never shared</li>
+  <li>No data collection or transmission</li>
+  <li>Open source - full code review available</li>
+</ul>
+
+<p><strong>Perfect for:</strong> React/Vue/Angular apps, Next.js/Nuxt.js projects, Mobile development, Multi-platform applications</p>
   ]]></description>
 
     <!-- Product and plugin compatibility requirements.
