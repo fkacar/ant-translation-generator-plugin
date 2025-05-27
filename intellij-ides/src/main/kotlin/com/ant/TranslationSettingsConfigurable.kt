@@ -208,7 +208,7 @@ class TranslationSettingsConfigurable : SearchableConfigurable, Configurable.NoS
             shortcutPanel.add(shortcutContentPanel, BorderLayout.CENTER)
             
             // Add fixed shortcut information
-            val removeShortcutLabel = JLabel("Remove Translation Shortcut (fixed): Shift + Control + D")
+            val removeShortcutLabel = JLabel("Remove Translation Shortcut (fixed): Ctrl + Shift + Backspace")
             removeShortcutLabel.border = BorderFactory.createEmptyBorder(10, 0, 0, 0) // Space at top
             shortcutPanel.add(removeShortcutLabel, BorderLayout.SOUTH)
             

@@ -22,7 +22,7 @@
       <li><strong>🚀 Instant Translation Key Generation</strong> - Select text and generate hierarchical keys with one keystroke</li>
       <li><strong>🤖 AI-Powered Auto Translation</strong> - Integrate with OpenAI GPT-4 for automatic translations to 70+ languages</li>
       <li><strong>📁 Multi-Language File Management</strong> - Support for multiple translation files with project-relative paths</li>
-      <li><strong>⌨️ Smart Keyboard Shortcuts</strong> - Generate (Shift+Ctrl+T) and Remove (Shift+Ctrl+D) translation keys</li>
+      <li><strong>⌨️ Smart Keyboard Shortcuts</strong> - Generate (Shift+Ctrl+T) and Remove (Ctrl+Shift+Backspace or Cmd + Shift + Backspace for Mac) translation keys</li>
       <li><strong>🎯 Smart Key Management</strong> - Remove keys and restore original text seamlessly</li>
       <li><strong>🔧 Customizable Settings</strong> - Configure function names, file paths, and language mappings</li>
     </ul>
@@ -111,15 +111,19 @@
     </extensions>
 
     <actions>
+        <!-- Translation Actions Group -->
+        <group id="com.ant.TranslationActions" text="Translation" description="Translation key actions">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </group>
+        
         <action id="com.ant.GenerateTranslationKey" class="com.ant.actions.GenerateTranslationAction" text="Generate Translation Key"
                 description="Generate translation key for selected text">
-            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
-            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl T"/>
+            <add-to-group group-id="com.ant.TranslationActions" anchor="first"/>
         </action>
         <action id="com.ant.RemoveTranslationKey" class="com.ant.actions.RemoveTranslationAction" text="Remove Translation Key"
                 description="Remove translation key for selected text">
-            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
-            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl D"/>
+            <add-to-group group-id="com.ant.TranslationActions" anchor="last"/>
         </action>
     </actions>
 </idea-plugin>

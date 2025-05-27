@@ -36,13 +36,11 @@ object ShortcutRegistrar {
             
             // Get shortcuts from Settings
             val settings = TranslationSettings.getApplicationInstance()
-            val selectedShortcut = settings.shortcutKey.trim().lowercase()
+            val generateShortcut = settings.shortcutKey.trim().lowercase()
+            val removeShortcut = settings.getRemoveTranslationShortcut().trim().lowercase()
             
-            logger.warn("User selected shortcut: $selectedShortcut")
-            
-            // Determine which action the selected shortcut belongs to
-            val lastKey = selectedShortcut.trim().split(" ").lastOrNull()?.lowercase() ?: ""
-            logger.warn("Last key in shortcut: $lastKey")
+            logger.warn("User selected Generate shortcut: $generateShortcut")
+            logger.warn("User selected Remove shortcut: $removeShortcut")
             
             // First clear ALL shortcuts (very important)
             logger.warn("Clearing all shortcuts...")
@@ -50,18 +48,13 @@ object ShortcutRegistrar {
             clearAllShortcuts(activeKeymap, "com.ant.GenerateTranslationKey")
             clearAllShortcuts(activeKeymap, "com.ant.RemoveTranslationKey")
             
-            // Determine which action we need to set the shortcut for
-            if (lastKey == "t") {
-                // Only add shortcut for GenerateTranslationKey
-                logger.warn("Shortcut will be added for GenerateTranslationKey: $selectedShortcut")
-                registerCustomShortcut(activeKeymap, "com.ant.GenerateTranslationKey", selectedShortcut)
-            } else if (lastKey == "g") {
-                // Keep this for backward compatibility
-                logger.warn("Shortcut will be added for GenerateTranslationKey: $selectedShortcut")
-                registerCustomShortcut(activeKeymap, "com.ant.GenerateTranslationKey", selectedShortcut)
-            } else {
-                logger.warn("Invalid shortcut last key: $lastKey. Shortcut cannot be assigned!")
-            }
+            // Register Generate Translation shortcut
+            logger.warn("Registering Generate Translation shortcut: $generateShortcut")
+            registerCustomShortcut(activeKeymap, "com.ant.GenerateTranslationKey", generateShortcut)
+            
+            // Register Remove Translation shortcut
+            logger.warn("Registering Remove Translation shortcut: $removeShortcut")
+            registerCustomShortcut(activeKeymap, "com.ant.RemoveTranslationKey", removeShortcut)
             
             // Check the shortcuts we registered
             logger.warn("Checking registered shortcuts...")
@@ -152,6 +145,10 @@ object ShortcutRegistrar {
             val keyCode = when (keyText) {
                 "t" -> KeyEvent.VK_T
                 "g" -> KeyEvent.VK_G
+                "backspace", "back_space" -> KeyEvent.VK_BACK_SPACE
+                "delete" -> KeyEvent.VK_DELETE
+                "enter" -> KeyEvent.VK_ENTER
+                "space" -> KeyEvent.VK_SPACE
                 else -> {
                     // Accept any letter key for more flexibility
                     val upperChar = keyText.uppercase().firstOrNull() ?: return null
