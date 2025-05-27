@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Smart Key Management**: Remove translation keys and restore original text
 - **Keyboard Shortcuts**: 
   - Generate Translation Key: `Shift + Ctrl + T`
-  - Remove Translation Key: `Shift + Ctrl + D`
+  - Remove Translation Key: `Shift + Alt + R`
 - **Context Menu Integration**: Right-click menu options for translation actions
 - **Customizable Settings**: Configure translation function names and file paths
 - **Language Support**: 70+ languages with ISO 639-1 language codes

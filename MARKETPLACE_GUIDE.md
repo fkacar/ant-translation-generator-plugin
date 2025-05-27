@@ -116,7 +116,7 @@ Plugin'inizi yayınlamadan önce `plugin.xml` dosyasını kontrol edin:
 
 ### Features
 - Generate translation keys: Shift + Ctrl + T
-- Remove translation keys: Shift + Ctrl + D
+- Remove translation keys: Shift + Alt + R
 - Auto-translate to multiple languages
 - JSON file validation and formatting
 - Project-relative path configuration
