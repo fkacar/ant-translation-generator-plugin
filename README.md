@@ -28,7 +28,7 @@
 
 ### ⌨️ **Keyboard Shortcuts & Context Menu**
 - **Generate Translation Key**: `Shift + Ctrl + T`
-- **Remove Translation Key**: `Shift + Ctrl + D`
+- **Remove Translation Key**: `Ctrl + Shift + Backspace` (Mac: `Cmd + Shift + Backspace`)
 - Right-click context menu integration
 - Customizable keyboard shortcuts
 
@@ -94,7 +94,7 @@
 
 #### Method 1: Keyboard Shortcut
 1. Select a translation key: `t('user.profile.name')`
-2. Press `Shift + Ctrl + D`
+2. Press `Ctrl + Shift + Backspace` (Mac: `Cmd + Shift + Backspace`)
 3. Key is replaced with original text and removed from files
 
 #### Method 2: Context Menu

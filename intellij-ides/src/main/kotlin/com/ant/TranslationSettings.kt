@@ -52,6 +52,7 @@ class TranslationSettings : PersistentStateComponent<TranslationSettings> {
     
     // Variables for settings
     var shortcutKey = "shift + control + t"
+    var removeShortcutKey = "shift + control + backspace"
     var translationFilePaths: MutableList<String> = mutableListOf()
     var translationFunction: String = "t"
     
@@ -184,6 +185,14 @@ class TranslationSettings : PersistentStateComponent<TranslationSettings> {
      */
     fun getGenerateTranslationShortcut(): String {
         return "shift + control + g"
+    }
+
+    /**
+     * Getter method for Remove Translation shortcut.
+     * Default shortcut: shift + control + backspace
+     */
+    fun getRemoveTranslationShortcut(): String {
+        return removeShortcutKey.ifBlank { "shift + control + backspace" }
     }
     
     // toString method for logging
