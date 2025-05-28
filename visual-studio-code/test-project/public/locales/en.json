@@ -1,0 +1,9 @@
+{
+  "welcome": {
+    "title": "Welcome to our application"
+  },
+  "common": {
+    "clickMe": "Click me",
+    "hello": "Hello world"
+  }
+} 

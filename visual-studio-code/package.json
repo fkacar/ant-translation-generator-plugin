@@ -1,0 +1,195 @@
+{
+  "name": "ant-translation-generator",
+  "displayName": "Ant Translation Generator",
+  "description": "🌍 Powerful VS Code extension for internationalization (i18n) - Generate translation keys instantly, manage multiple language files, and leverage AI-powered auto-translation with OpenAI GPT-4.",
+  "version": "1.1.3",
+  "publisher": "com-ant-translation",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other",
+    "Snippets",
+    "Formatters"
+  ],
+  "keywords": [
+    "i18n",
+    "internationalization",
+    "translation",
+    "localization",
+    "openai",
+    "gpt-4",
+    "react",
+    "vue",
+    "angular",
+    "typescript",
+    "javascript"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ant-translation.generateKey",
+        "title": "Generate Translation Key",
+        "category": "Ant Translation"
+      },
+      {
+        "command": "ant-translation.removeKey",
+        "title": "Remove Translation Key",
+        "category": "Ant Translation"
+      },
+      {
+        "command": "ant-translation.openSettings",
+        "title": "Open Settings",
+        "category": "Ant Translation"
+      },
+      {
+        "command": "ant-translation.testCommand",
+        "title": "Test Command (Debug)",
+        "category": "Ant Translation"
+      }
+    ],
+
+    "menus": {
+      "editor/context": [
+        {
+          "command": "ant-translation.generateKey",
+          "when": "editorHasSelection",
+          "group": "ant-translation@1"
+        },
+        {
+          "command": "ant-translation.removeKey",
+          "when": "editorHasSelection",
+          "group": "ant-translation@2"
+        }
+      ]
+    },
+    "views": {
+      "explorer": [
+        {
+          "id": "antTranslation.settingsView",
+          "name": "Ant Translation Settings",
+          "when": "workspaceFolderCount > 0"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Ant Translation Generator",
+      "properties": {
+        "antTranslation.translationFilePaths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "List of translation file paths relative to workspace root (e.g., 'public/locales/en.json')"
+        },
+        "antTranslation.translationFunction": {
+          "type": "string",
+          "default": "t",
+          "description": "Function name used in code for translations (e.g., 't', 'i18n', '$t')"
+        },
+        "antTranslation.autoTranslateEnabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable automatic translation using OpenAI GPT-4"
+        },
+        "antTranslation.openAiApiKey": {
+          "type": "string",
+          "default": "",
+          "description": "OpenAI API key for automatic translation (stored securely)"
+        },
+        "antTranslation.sourceLanguageFile": {
+          "type": "string",
+          "default": "",
+          "description": "Source language file path for auto-translation"
+        },
+        "antTranslation.languageFileLanguages": {
+          "type": "object",
+          "default": {},
+          "description": "Mapping of file paths to language codes (e.g., {'en.json': 'en', 'tr.json': 'tr'})"
+        }
+      }
+    },
+    "keybindings": [
+      {
+        "command": "ant-translation.generateKey",
+        "key": "cmd+alt+t",
+        "mac": "cmd+alt+t",
+        "win": "ctrl+alt+t",
+        "linux": "ctrl+alt+t",
+        "when": "editorTextFocus && editorHasSelection"
+      },
+      {
+        "command": "ant-translation.removeKey",
+        "key": "cmd+alt+r",
+        "mac": "cmd+alt+r", 
+        "win": "ctrl+alt+r",
+        "linux": "ctrl+alt+r",
+        "when": "editorTextFocus && editorHasSelection"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fkacar/ant-translation-generator-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fkacar/ant-translation-generator-plugin/issues"
+  },
+  "homepage": "https://github.com/fkacar/ant-translation-generator-plugin#readme",
+  "license": "MIT",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "screenshots": [
+    {
+      "path": "images/screenshots/1.png",
+      "description": "Generate translation keys with keyboard shortcuts or context menu"
+    },
+    {
+      "path": "images/screenshots/2.png",
+      "description": "Hover over auto generated translation keys to see values"
+    },
+    {
+      "path": "images/screenshots/3.png",
+      "description": "Auto generated hierarchical json structure for secondary language files"
+    },
+    {
+      "path": "images/screenshots/4.png",
+      "description": "Auto generated hierarchical json structure for source language file"
+    },
+    {
+      "path": "images/screenshots/5.png",
+      "description": "Command palette for all commands"
+    },
+    {
+      "path": "images/screenshots/6.png",
+      "description": "Settings panel for all settings"
+    }
+  ]
+} 

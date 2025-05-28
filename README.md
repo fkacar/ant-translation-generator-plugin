@@ -1,12 +1,35 @@
 # 🌍 Ant Translation Generator
 
 [![JetBrains Plugin](https://img.shields.io/badge/JetBrains-Plugin-orange.svg)](https://plugins.jetbrains.com/)
+[![VS Code Extension](https://img.shields.io/badge/VS%20Code-Extension-blue.svg)](https://marketplace.visualstudio.com/)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/fatihkacar/ant-translation-generator)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-**Ant Translation Generator** is a powerful IntelliJ IDEA plugin that streamlines the internationalization (i18n) process for your applications. Generate translation keys instantly, manage multiple language files, and leverage AI-powered auto-translation with OpenAI GPT-4.
+**Ant Translation Generator** is a powerful internationalization (i18n) tool available for both **JetBrains IDEs** and **Visual Studio Code**. Generate translation keys instantly, manage multiple language files, and leverage AI-powered auto-translation with OpenAI GPT-4.
 
-## ✨ Features
+## 🚀 Available Platforms
+
+### 🔧 JetBrains IDEs Plugin
+**For IntelliJ IDEA, WebStorm, PhpStorm, PyCharm, Rider, and more**
+
+[![JetBrains Plugin](https://img.shields.io/badge/Install-JetBrains%20Plugin-orange.svg)](https://plugins.jetbrains.com/)
+
+- Full-featured plugin with comprehensive settings panel
+- Advanced Kotlin-based implementation
+- Supports all JetBrains IDEs (2023.1+)
+- [📖 View JetBrains Plugin Documentation](intellij-ides/README.md)
+
+### 💻 Visual Studio Code Extension
+**For Visual Studio Code**
+
+[![VS Code Extension](https://img.shields.io/badge/Install-VS%20Code%20Extension-blue.svg)](https://marketplace.visualstudio.com/)
+
+- Modern TypeScript implementation
+- Webview-based settings interface
+- Optimized for VS Code workflow
+- [📖 View VS Code Extension Documentation](visual-studio-code/README.md)
+
+## ✨ Core Features
 
 ### 🚀 **Instant Translation Key Generation**
 - Select any text in your code and generate translation keys with a single keystroke
@@ -15,8 +38,8 @@
 - Customizable translation function names (t, i18n, $t, etc.)
 
 ### 🤖 **AI-Powered Auto Translation**
-- **NEW!** Integrate with OpenAI GPT-4 for automatic translations
-- Set a source language file (e.g., Turkish) and auto-translate to target languages
+- Integrate with OpenAI GPT-4 for automatic translations
+- Set a source language file and auto-translate to target languages
 - Supports 70+ languages with ISO 639-1 language codes
 - Smart fallback to original text if translation fails
 
@@ -27,8 +50,8 @@
 - Real-time file existence validation
 
 ### ⌨️ **Keyboard Shortcuts & Context Menu**
-- **Generate Translation Key**: `Shift + Ctrl + T`
-- **Remove Translation Key**: `Shift + Ctrl + D`
+- **Generate Translation Key**: `Shift + Ctrl + T` (Windows/Linux) / `Shift + Cmd + T` (macOS)
+- **Remove Translation Key**: `Shift + Ctrl + D` (Windows/Linux) / `Shift + Cmd + D` (macOS)
 - Right-click context menu integration
 - Customizable keyboard shortcuts
 
@@ -38,112 +61,81 @@
 - CamelCase key generation from selected text
 - Duplicate key prevention
 
-## 🛠️ Installation
+## 🛠️ Quick Installation
 
-### From JetBrains Marketplace
-1. Open IntelliJ IDEA/WebStorm/PhpStorm/Rider
-2. Go to `File` → `Settings` → `Plugins`
-3. Search for "Ant Translation Generator"
-4. Click `Install` and restart your IDE
+### JetBrains IDEs
+```bash
+# Via IDE
+File → Settings → Plugins → Search "Ant Translation Generator"
 
-### Manual Installation
-1. Download the latest release from [GitHub Releases](https://github.com/fatihkacar/ant-translation-generator-plugin/releases)
-2. Go to `File` → `Settings` → `Plugins`
-3. Click the gear icon → `Install Plugin from Disk`
-4. Select the downloaded `.zip` file
-
-## ⚙️ Configuration
-
-### Basic Setup
-1. Go to `File` → `Settings` → `Ant Translation Settings`
-2. **Translation Files Tab**: Add your translation file paths
-   ```
-   wwwroot/languages/en.json
-   wwwroot/languages/tr.json
-   src/assets/i18n/de.json
-   ```
-3. **General Settings Tab**: Configure function name and shortcuts
-4. Click `Apply` to save settings
-
-### Auto Translation Setup
-1. Navigate to the **Auto Translate** tab
-2. Enable auto translation
-3. Enter your OpenAI API key ([Get API Key](https://platform.openai.com/api-keys))
-4. Test your API key with the "Test API Key" button
-5. Select your source language file (e.g., `tr.json` for Turkish)
-6. Configure language codes for each translation file:
-   - `tr.json` → `tr - Turkish`
-   - `en.json` → `en - English`
-   - `de.json` → `de - German`
-
-## 🎮 Usage
-
-### Generate Translation Keys
-
-#### Method 1: Keyboard Shortcut
-1. Select text in your code: `"Welcome to our app"`
-2. Press `Shift + Ctrl + T`
-3. Text is replaced with: `t('components.pages.welcome.welcomeToOurApp')`
-4. Translation files are updated automatically
-
-#### Method 2: Context Menu
-1. Select text in your code
-2. Right-click → `Generate Translation Key`
-
-### Remove Translation Keys
-
-#### Method 1: Keyboard Shortcut
-1. Select a translation key: `t('user.profile.name')`
-2. Press `Shift + Ctrl + D`
-3. Key is replaced with original text and removed from files
-
-#### Method 2: Context Menu
-1. Select a translation key
-2. Right-click → `Remove Translation Key`
-
-### Example Workflow
-
-**Before:**
-```javascript
-const message = "Hello World";
-const title = "User Profile";
+# Or download from marketplace
+https://plugins.jetbrains.com/
 ```
 
-**After generating translation keys:**
-```javascript
-const message = t('components.pages.home.helloWorld');
-const title = t('components.pages.profile.userProfile');
+### Visual Studio Code
+```bash
+# Via VS Code
+Ctrl+Shift+X → Search "Ant Translation Generator"
+
+# Or via command line
+code --install-extension ant.ant-translation-generator
 ```
 
-**Generated JSON files:**
+## 🎮 Usage Example
 
-`en.json`:
+### Before
+```javascript
+const message = "Welcome to our application";
+const title = "User Profile Settings";
+const button = "Save Changes";
+```
+
+### After (Shift+Ctrl+T / Shift+Cmd+T)
+```javascript
+const message = t('components.pages.welcome.welcomeToOurApplication');
+const title = t('components.pages.profile.userProfileSettings');
+const button = t('common.actions.saveChanges');
+```
+
+### Generated Translation Files
+
+**en.json**:
 ```json
 {
   "components": {
     "pages": {
-      "home": {
-        "helloWorld": "Hello World"
+      "welcome": {
+        "welcomeToOurApplication": "Welcome to our application"
       },
       "profile": {
-        "userProfile": "User Profile"
+        "userProfileSettings": "User Profile Settings"
       }
+    }
+  },
+  "common": {
+    "actions": {
+      "saveChanges": "Save Changes"
     }
   }
 }
 ```
 
-`tr.json` (with auto-translate):
+**tr.json** (with auto-translate):
 ```json
 {
   "components": {
     "pages": {
-      "home": {
-        "helloWorld": "Merhaba Dünya"
+      "welcome": {
+        "welcomeToOurApplication": "Uygulamamıza hoş geldiniz"
       },
       "profile": {
-        "userProfile": "Kullanıcı Profili"
+        "userProfileSettings": "Kullanıcı Profil Ayarları"
       }
+    }
+  },
+  "common": {
+    "actions": {
+      "saveChanges": "Değişiklikleri Kaydet"
     }
   }
 }
@@ -151,7 +143,7 @@ const title = t('components.pages.profile.userProfile');
 
 ## 🌐 Supported Languages
 
-The plugin supports 70+ languages including:
+Both platforms support 70+ languages including:
 
 | Code | Language | Code | Language | Code | Language |
 |------|----------|------|----------|------|----------|
@@ -159,12 +151,14 @@ The plugin supports 70+ languages including:
 | fr | French | es | Spanish | it | Italian |
 | pt | Portuguese | ru | Russian | ja | Japanese |
 | ko | Korean | zh | Chinese | ar | Arabic |
-| hi | Hindi | ... | ... | ... | ... |
+| hi | Hindi | nl | Dutch | sv | Swedish |
+| da | Danish | no | Norwegian | fi | Finnish |
 
-[View full language list](src/main/kotlin/com/ant/utils/LanguageCodes.kt)
+[View full language list →](intellij-ides/src/main/kotlin/com/ant/utils/LanguageCodes.kt)
 
-## 🔧 Supported IDEs
+## 🔧 Supported Environments
 
+### JetBrains IDEs
 - IntelliJ IDEA (Ultimate & Community)
 - WebStorm
 - PhpStorm
@@ -172,6 +166,12 @@ The plugin supports 70+ languages including:
 - Rider
 - Android Studio
 - All JetBrains IDEs (2023.1+)
+
+### Visual Studio Code
+- VS Code 1.74.0+
+- VS Code Insiders
+- Code - OSS
+- All VS Code compatible editors
 
 ## 📋 Supported File Types
 
@@ -183,67 +183,82 @@ The plugin supports 70+ languages including:
 - PHP (.php)
 - HTML (.html)
 - Kotlin (.kt)
+- Razor (.razor)
 - And more...
 
 ## 🎯 Use Cases
 
 ### Frontend Development
-- React/Vue/Angular applications
-- Next.js/Nuxt.js projects
-- Mobile app development (React Native, Flutter)
+- **React/Vue/Angular** applications
+- **Next.js/Nuxt.js** projects
+- **Mobile development** (React Native, Flutter)
+- **Progressive Web Apps** (PWA)
 
 ### Backend Development
-- Node.js applications
-- PHP applications
-- .NET applications (with Rider)
+- **Node.js** applications
+- **PHP** applications
+- **.NET** applications (with Rider)
+- **Python** applications (with PyCharm)
 
 ### Multi-platform Projects
-- Electron applications
-- Progressive Web Apps (PWA)
-- Hybrid mobile applications
+- **Electron** applications
+- **Hybrid mobile** applications
+- **Desktop** applications
 
 ## 🔒 Privacy & Security
 
-- **API Key Security**: Your OpenAI API key is stored locally and never shared
-- **Local Processing**: All file operations are performed locally
-- **No Data Collection**: The plugin doesn't collect or transmit any personal data
-- **Open Source**: Full source code is available for review
+- **🔐 API Key Security**: Your OpenAI API key is stored locally and never shared
+- **💻 Local Processing**: All file operations are performed locally
+- **🚫 No Data Collection**: Neither plugin collects or transmits any personal data
+- **📖 Open Source**: Full source code is available for review
 
-## 🐛 Troubleshooting
+## 📁 Project Structure
 
-### Common Issues
-
-**Translation files not found:**
-- Ensure file paths are relative to project root
-- Check file permissions
-- Validate JSON syntax
-
-**Auto-translation not working:**
-- Verify OpenAI API key is valid
-- Check internet connection
-- Ensure sufficient API credits
-
-**Keyboard shortcuts not working:**
-- Check for conflicting shortcuts in IDE settings
-- Try using context menu instead
-- Restart IDE after configuration changes
-
-### Getting Help
-
-1. Check the [FAQ](https://github.com/fatihkacar/ant-translation-generator-plugin/wiki/FAQ)
-2. Search [existing issues](https://github.com/fatihkacar/ant-translation-generator-plugin/issues)
-3. Create a [new issue](https://github.com/fatihkacar/ant-translation-generator-plugin/issues/new)
+```
+ant-translation-generator-plugin/
+├── intellij-ides/              # JetBrains IDEs Plugin
+│   ├── src/main/kotlin/        # Kotlin source code
+│   ├── src/main/resources/     # Plugin resources
+│   ├── build.gradle.kts        # Gradle build script
+│   └── README.md              # JetBrains plugin documentation
+├── visual-studio-code/        # VS Code Extension
+│   ├── src/                   # TypeScript source code
+│   ├── package.json           # Extension manifest
+│   ├── tsconfig.json          # TypeScript configuration
+│   └── README.md              # VS Code extension documentation
+├── LICENSE                    # MIT License
+├── CONTRIBUTING.md            # Contributing guidelines
+└── README.md                  # This file
+```
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+We welcome contributions to both platforms! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
 ### Development Setup
+
+**JetBrains Plugin:**
 ```bash
 git clone https://github.com/fatihkacar/ant-translation-generator-plugin.git
 cd ant-translation-generator-plugin/intellij-ides
 ./gradlew runIde
 ```
+
+**VS Code Extension:**
+```bash
+git clone https://github.com/fatihkacar/ant-translation-generator-plugin.git
+cd ant-translation-generator-plugin/visual-studio-code
+npm install
+npm run compile
+# Press F5 to run extension in development mode
+```
+
+## 🐛 Issues & Support
+
+- **📋 Report Issues**: [GitHub Issues](https://github.com/fatihkacar/ant-translation-generator-plugin/issues)
+- **💬 Discussions**: [GitHub Discussions](https://github.com/fatihkacar/ant-translation-generator-plugin/discussions)
+- **📧 Email**: info@fatihkacar.com
+- **🌐 Website**: [fatihkacar.com](https://fatihkacar.com)
 
 ## 📄 License
 
@@ -251,18 +266,22 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- OpenAI for providing GPT-4 API
-- JetBrains for the excellent Plugin SDK
-- The open-source community for inspiration and feedback
+- **OpenAI** for providing GPT-4 API
+- **JetBrains** for the excellent Plugin SDK
+- **Microsoft** for VS Code Extension API
+- **Open-source community** for inspiration and feedback
 
-## 📞 Support
+## 🌟 Show Your Support
 
-- **Email**: info@fatihkacar.com
-- **GitHub Issues**: [Report a bug](https://github.com/fatihkacar/ant-translation-generator-plugin/issues)
-- **Website**: [fatihkacar.com](https://fatihkacar.com)
+If you find this tool helpful:
+
+- ⭐ **Star this repository** on GitHub
+- 🔄 **Share** with your developer friends
+- 📝 **Rate** on [JetBrains Marketplace](https://plugins.jetbrains.com/) and [VS Code Marketplace](https://marketplace.visualstudio.com/)
+- 🐛 **Report bugs** or **suggest features**
 
 ---
 
 **Made with ❤️ by [Fatih Kacar](https://fatihkacar.com)**
 
-*If you find this plugin helpful, please consider giving it a ⭐ on GitHub and rating it on the JetBrains Marketplace!*
+*Streamlining internationalization for developers worldwide* 🌍
