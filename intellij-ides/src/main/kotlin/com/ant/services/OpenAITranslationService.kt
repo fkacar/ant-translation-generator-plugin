@@ -31,9 +31,15 @@ class OpenAITranslationService(private val apiKey: String) {
             
             val prompt = """
                 Translate the following text from $sourceLanguage to $targetLanguage.
-                Only return the translated text, nothing else.
                 
-                Text to translate: "$text"
+                CRITICAL formatting rules:
+                - Preserve EXACT capitalization pattern of the source text (if source starts lowercase, translation must start lowercase)
+                - Preserve EXACT punctuation of the source text (if source has no period, translation must have no period)
+                - Do not add punctuation that doesn't exist in the source
+                - Do not change capitalization from the source pattern
+                - Return ONLY the translated text without quotes or additional formatting
+                
+                Text to translate: $text
             """.trimIndent()
             
             val requestBody = JsonObject().apply {
