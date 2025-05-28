@@ -1,1 +1,13 @@
 **/build
+.vscode
+*.vsix
+*.zip
+**/node_modules
+**/dist
+**/out
+**/build
+**/dist
+**/out
+**/build
+**/dist
+**/out
