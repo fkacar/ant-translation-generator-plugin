@@ -2,6 +2,11 @@
 
 All notable changes to the Ant Translation Generator IntelliJ IDEA plugin will be documented in this file.
 
+## [1.1.5] - 2025-05-29
+
+### IntelliJ Plugin
+- No changes made to IntelliJ plugin in this release
+
 ## [1.1.3] - 2025-05-28
 
 ### IntelliJ Plugin

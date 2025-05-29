@@ -5,6 +5,13 @@ All notable changes to the Ant Translation Generator plugin will be documented i
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
+## [1.1.5] - 2025-05-29
+
+### Changed - VS Code Extension
+- 🎨 **Images** - README images and descriptions
+- **Docs** - Some fixes for misspeling and wrong info
+
 ## [1.1.3] - 2025-05-28
 
 ### Added - VS Code Extension
@@ -170,7 +177,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Support
 
 For bug reports, feature requests, or questions:
-- **GitHub Issues**: [Report an issue](https://github.com/fatihkacar/ant-translation-generator-plugin/issues)
+- **GitHub Issues**: [Report an issue](https://github.com/fkacar/ant-translation-generator-plugin/issues)
 - **Email**: info@fatihkacar.com
 - **Documentation**: [README.md](README.md)
 - **IntelliJ Plugin**: [intellij-ides/README.md](intellij-ides/README.md)
