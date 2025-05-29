@@ -2,7 +2,7 @@
 
 [![JetBrains Plugin](https://img.shields.io/badge/JetBrains-Plugin-orange.svg)](https://plugins.jetbrains.com/)
 [![VS Code Extension](https://img.shields.io/badge/VS%20Code-Extension-blue.svg)](https://marketplace.visualstudio.com/)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/fatihkacar/ant-translation-generator)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/fkacar/ant-translation-generator)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 **Ant Translation Generator** is a powerful internationalization (i18n) tool available for both **JetBrains IDEs** and **Visual Studio Code**. Generate translation keys instantly, manage multiple language files, and leverage AI-powered auto-translation with OpenAI GPT-4.
@@ -239,14 +239,14 @@ We welcome contributions to both platforms! Please see our [Contributing Guide](
 
 **JetBrains Plugin:**
 ```bash
-git clone https://github.com/fatihkacar/ant-translation-generator-plugin.git
+git clone https://github.com/fkacar/ant-translation-generator-plugin.git
 cd ant-translation-generator-plugin/intellij-ides
 ./gradlew runIde
 ```
 
 **VS Code Extension:**
 ```bash
-git clone https://github.com/fatihkacar/ant-translation-generator-plugin.git
+git clone https://github.com/fkacar/ant-translation-generator-plugin.git
 cd ant-translation-generator-plugin/visual-studio-code
 npm install
 npm run compile
@@ -255,8 +255,8 @@ npm run compile
 
 ## 🐛 Issues & Support
 
-- **📋 Report Issues**: [GitHub Issues](https://github.com/fatihkacar/ant-translation-generator-plugin/issues)
-- **💬 Discussions**: [GitHub Discussions](https://github.com/fatihkacar/ant-translation-generator-plugin/discussions)
+- **📋 Report Issues**: [GitHub Issues](https://github.com/fkacar/ant-translation-generator-plugin/issues)
+- **💬 Discussions**: [GitHub Discussions](https://github.com/fkacar/ant-translation-generator-plugin/discussions)
 - **📧 Email**: info@fatihkacar.com
 - **🌐 Website**: [fatihkacar.com](https://fatihkacar.com)
 

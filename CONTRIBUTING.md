@@ -56,7 +56,7 @@ git clone https://github.com/YOUR_USERNAME/ant-translation-generator.git
 cd ant-translation-generator
 
 # Add upstream remote
-git remote add upstream https://github.com/fatihkacar/ant-translation-generator.git
+git remote add upstream https://github.com/fkacar/ant-translation-generator.git
 ```
 
 ### 2. Import Project
@@ -116,7 +116,7 @@ We welcome various types of contributions:
 
 ### Finding Issues to Work On
 
-- Check the [Issues](https://github.com/fatihkacar/ant-translation-generator/issues) page
+- Check the [Issues](https://github.com/fkacar/ant-translation-generator/issues) page
 - Look for issues labeled `good first issue` for beginners
 - Issues labeled `help wanted` are great for contributors
 - Feel free to create new issues for bugs or feature requests

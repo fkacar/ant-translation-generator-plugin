@@ -1,7 +1,7 @@
 # 🌍 Ant Translation Generator - IntelliJ IDEA Plugin
 
 [![JetBrains Plugin](https://img.shields.io/badge/JetBrains-Plugin-orange.svg)](https://plugins.jetbrains.com/)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/fatihkacar/ant-translation-generator)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/fkacar/ant-translation-generator)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](../LICENSE)
 
 **Ant Translation Generator** is a powerful IntelliJ IDEA plugin that streamlines the internationalization (i18n) process for your applications. Generate translation keys instantly, manage multiple language files, and leverage AI-powered auto-translation with OpenAI GPT-4.
@@ -47,7 +47,7 @@
 4. Click `Install` and restart your IDE
 
 ### Manual Installation
-1. Download the latest release from [GitHub Releases](https://github.com/fatihkacar/ant-translation-generator-plugin/releases)
+1. Download the latest release from [GitHub Releases](https://github.com/fkacar/ant-translation-generator-plugin/releases)
 2. Go to `File` → `Settings` → `Plugins`
 3. Click the gear icon → `Install Plugin from Disk`
 4. Select the downloaded `.zip` file
@@ -230,9 +230,9 @@ The plugin supports 70+ languages including:
 
 ### Getting Help
 
-1. Check the [FAQ](https://github.com/fatihkacar/ant-translation-generator-plugin/wiki/FAQ)
-2. Search [existing issues](https://github.com/fatihkacar/ant-translation-generator-plugin/issues)
-3. Create a [new issue](https://github.com/fatihkacar/ant-translation-generator-plugin/issues/new)
+1. Check the [FAQ](https://github.com/fkacar/ant-translation-generator-plugin/wiki/FAQ)
+2. Search [existing issues](https://github.com/fkacar/ant-translation-generator-plugin/issues)
+3. Create a [new issue](https://github.com/fkacar/ant-translation-generator-plugin/issues/new)
 
 ## 🤝 Contributing
 
@@ -240,7 +240,7 @@ We welcome contributions! Please see our [Contributing Guide](../CONTRIBUTING.md
 
 ### Development Setup
 ```bash
-git clone https://github.com/fatihkacar/ant-translation-generator-plugin.git
+git clone https://github.com/fkacar/ant-translation-generator-plugin.git
 cd ant-translation-generator-plugin/intellij-ides
 ./gradlew runIde
 ```
@@ -258,7 +258,7 @@ This project is licensed under the MIT License - see the [LICENSE](../LICENSE) f
 ## 📞 Support
 
 - **Email**: info@fatihkacar.com
-- **GitHub Issues**: [Report a bug](https://github.com/fatihkacar/ant-translation-generator-plugin/issues)
+- **GitHub Issues**: [Report a bug](https://github.com/fkacar/ant-translation-generator-plugin/issues)
 - **Website**: [fatihkacar.com](https://fatihkacar.com)
 
 ---

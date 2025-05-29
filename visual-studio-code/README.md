@@ -23,29 +23,29 @@
 
 ## 📸 Screenshots
 
-### Generate Translation Keys
-![Generate Translation Key Demo](images/screenshots/generate-key-demo.gif)
-*Select text and generate hierarchical translation keys with keyboard shortcuts*
+### Generate Translation Keys with/without OpenAi ChatGPT API (ChatGPT is optional)
+![Generate Translation Key Demo](https://github.com/fkacar/ant-translation-generator-plugin/blob/main/visual-studio-code/images/screenshots/1.png?raw=true)
+*Generate translation keys using keyboard shortcuts or right-click menu*
 
-### Modern Settings Panel
-![Settings Panel](images/screenshots/settings-panel.png)
-*Configure translation files, OpenAI integration, and language mappings*
+### Auto Generated Hierarchical JSON Structure for Source Language File
+![Remove Translation Key Demo](https://github.com/fkacar/ant-translation-generator-plugin/blob/main/visual-studio-code/images/screenshots/4.png?raw=true)
+*Auto generated hierarchical json structure for source language file*
 
-### Context Menu Integration
-![Context Menu](images/screenshots/context-menu.png)
-*Right-click on selected text for quick translation actions*
-
-### Auto Translation with OpenAI
-![Auto Translation](images/screenshots/auto-translation.png)
-*Automatic translation to 70+ languages using GPT-4*
+### Auto Generated Hierarchical JSON Structure for Secondary Language Files
+![Auto Translation](https://github.com/fkacar/ant-translation-generator-plugin/blob/main/visual-studio-code/images/screenshots/3.png?raw=true)
+*Auto generated hierarchical json structure for secondary language files*
 
 ### Hover Information
-![Hover Information](images/screenshots/hover-info.png)
-*View translation values by hovering over translation keys*
+![Hover Information](https://github.com/fkacar/ant-translation-generator-plugin/blob/main/visual-studio-code/images/screenshots/2.png?raw=true)
+*Hover over auto generated translation keys to see values*
 
-### Remove Translation Keys
-![Remove Translation Key Demo](images/screenshots/remove-key-demo.gif)
-*Remove translation keys and restore original text from source language*
+### Command Palette Options
+![Context Menu](https://github.com/fkacar/ant-translation-generator-plugin/blob/main/visual-studio-code/images/screenshots/5.png?raw=true)
+*Command palette for all commands*
+
+### Modern Settings Panel
+![Settings Panel](https://github.com/fkacar/ant-translation-generator-plugin/blob/main/visual-studio-code/images/screenshots/6.png?raw=true)
+*Settings panel for all settings*
 
 ## ⌨️ Keyboard Shortcuts
 
@@ -277,10 +277,10 @@ Contributions are welcome! Please see [CONTRIBUTING.md](../CONTRIBUTING.md) for 
 
 ## 🐛 Issues & Support
 
-- 🐛 **Report Issues**: [GitHub Issues](https://github.com/fatihkacar/ant-translation-generator-plugin/issues)
+- 🐛 **Report Issues**: [GitHub Issues](https://github.com/fkacar/ant-translation-generator-plugin/issues)
 - 📧 **Email**: info@fatihkacar.com
 - 🌐 **Website**: https://fatihkacar.com
-- 📱 **GitHub**: https://github.com/fatihkacar/ant-translation-generator-plugin
+- 📱 **GitHub**: https://github.com/fkacar/ant-translation-generator-plugin
 
 ---
 
