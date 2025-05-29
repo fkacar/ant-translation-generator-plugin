@@ -2,6 +2,12 @@
 
 All notable changes to the "ant-translation-generator" extension will be documented in this file.
 
+## [1.1.5] - 2025-05-29
+
+### Changed
+- 🎨 **Images** - README images and descriptions
+- **Docs** - Some fixes for misspeling and wrong info
+
 ## [1.1.3] - 2025-05-28
 
 ### Added
